@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Lofi Cat Theme */
+@theme {
+  /* Background colors - warm creamy tones */
+  --color-cream: #FFF8F0;
+  --color-cream-dark: #F5EDE4;
+  --color-warm-white: #FFFBF7;
+
+  /* Primary - Soft lavender/purple (lofi vibes) */
+  --color-lavender: #9B8AA5;
+  --color-lavender-light: #C4B7CE;
+  --color-lavender-dark: #7A6B85;
+
+  /* Secondary - Dusty pink (cozy cat) */
+  --color-dusty-pink: #E8B4B8;
+  --color-dusty-pink-light: #F5D5D8;
+  --color-dusty-pink-dark: #D4949A;
+
+  /* Accent - Soft blue (sleepy vibes) */
+  --color-dusty-blue: #8BA4B4;
+  --color-dusty-blue-light: #B5C9D5;
+  --color-dusty-blue-dark: #6B8494;
+
+  /* Accent - Soft mint (fresh) */
+  --color-soft-mint: #A8D5BA;
+  --color-soft-mint-light: #C8E8D4;
+  --color-soft-mint-dark: #88B59A;
+
+  /* Accent - Peachy (warm) */
+  --color-peach: #F5C5A3;
+  --color-peach-light: #FADDC5;
+  --color-peach-dark: #E0A883;
+
+  /* Text colors */
+  --color-text-primary: #4A4458;
+  --color-text-secondary: #6B6580;
+  --color-text-muted: #9890A5;
+
+  /* Shadows - soft and dreamy */
+  --shadow-soft: 0 4px 20px rgba(155, 138, 165, 0.15);
+  --shadow-hover: 0 8px 30px rgba(155, 138, 165, 0.25);
+
+  /* Border radius - round and soft like a cat */
+  --radius-cat: 1rem;
+  --radius-pill: 9999px;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUuRTM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwuRTM.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling - cute and minimal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-lavender-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lavender);
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-dusty-pink-light);
+  color: var(--color-text-primary);
+}
