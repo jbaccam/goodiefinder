@@ -26,19 +26,18 @@ export function CompanyDirectory() {
     : IOWA_COMPANIES_WITH_LINKS;
 
   return (
-    <div className="mx-4 mb-6">
-      {/* Cat Mascot with Speech Bubble */}
+    <div className="mb-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-warm-white rounded-2xl p-4 shadow-soft"
       >
-        <div className="flex items-start gap-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           {/* Cat Icon */}
           <motion.div
             animate={{ rotate: isOpen ? [0, -10, 10, -10, 0] : 0 }}
             transition={{ duration: 0.5 }}
-            className="flex-shrink-0 bg-lavender p-3 rounded-2xl shadow-soft"
+            className="flex-shrink-0 bg-lavender p-3 rounded-2xl shadow-soft self-center sm:self-start"
           >
             <Cat className="w-8 h-8 text-cream" />
           </motion.div>
@@ -46,8 +45,7 @@ export function CompanyDirectory() {
           {/* Speech Bubble */}
           <div className="flex-1">
             <div className="relative bg-cream rounded-2xl p-4 shadow-sm">
-              {/* Speech bubble arrow */}
-              <div className="absolute left-[-8px] top-4 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-cream" />
+              <div className="absolute left-[-8px] top-4 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-cream hidden sm:block" />
 
               <p className="text-text-primary mb-3">
                 Sometimes hunting for jobs is hard! Check out the list of{' '}

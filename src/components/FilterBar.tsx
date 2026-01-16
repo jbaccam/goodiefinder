@@ -33,12 +33,13 @@ export function FilterBar() {
   const hasFilters = city || category || dateRange || experienceLevel || searchQuery;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, duration: 0.5 }}
-      className="bg-warm-white rounded-2xl p-4 md:p-6 shadow-soft mx-4 mb-6"
-    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="bg-warm-white rounded-2xl p-4 md:p-6 shadow-soft mb-6"
+      >
+
       {/* Search Bar */}
       <div className="relative mb-4">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
@@ -47,9 +48,9 @@ export function FilterBar() {
           placeholder="Search jobs... (e.g., React, Python, DevOps)"
           value={localSearch}
           onChange={(e) => setLocalSearch(e.target.value)}
-          className="w-full pl-12 pr-10 py-3 bg-cream rounded-xl border-2 border-transparent
+          className="w-full pl-12 pr-10 py-2.5 sm:py-3 bg-cream rounded-xl border-2 border-transparent
                      focus:border-lavender-light focus:outline-none
-                     text-text-primary placeholder:text-text-muted
+                     text-text-primary placeholder:text-text-muted text-sm sm:text-base
                      transition-colors duration-200"
         />
         {localSearch && (
@@ -63,9 +64,9 @@ export function FilterBar() {
       </div>
 
       {/* Filter Row */}
-      <div className="flex flex-wrap gap-3 mb-4">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mb-4">
         {/* City Filter */}
-        <div className="relative flex-1 min-w-[180px]">
+        <div className="relative flex-1 min-w-0 sm:min-w-[180px]">
           <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-dusty-pink" />
           <select
             value={city}
@@ -89,7 +90,7 @@ export function FilterBar() {
         </div>
 
         {/* Date Filter */}
-        <div className="relative flex-1 min-w-[140px]">
+        <div className="relative flex-1 min-w-0 sm:min-w-[140px]">
           <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-dusty-blue" />
           <select
             value={dateRange}
@@ -113,7 +114,7 @@ export function FilterBar() {
         </div>
 
         {/* Experience Level Filter */}
-        <div className="relative flex-1 min-w-[160px]">
+        <div className="relative flex-1 min-w-0 sm:min-w-[160px]">
           <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-soft-mint" />
           <select
             value={experienceLevel}

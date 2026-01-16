@@ -106,7 +106,8 @@ export function JobList() {
   // Loading state
   if (isLoading) {
     return (
-      <div className="px-4">
+    <div>
+
         <div className="flex items-center justify-center gap-3 mb-6 text-text-secondary">
           <motion.div
             animate={{ rotate: 360 }}
@@ -138,7 +139,8 @@ export function JobList() {
 
   // Job list
   return (
-    <div className="px-4">
+      <div>
+
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -96,7 +96,7 @@ export function JobCard({ job, index }: JobCardProps) {
       </div>
 
       {/* Meta Info */}
-      <div className="flex flex-wrap gap-3 mb-4 text-sm text-text-secondary">
+      <div className="flex flex-wrap gap-3 mb-4 text-xs sm:text-sm text-text-secondary">
         <span className="flex items-center gap-1">
           <MapPin className="w-4 h-4 text-dusty-pink" />
           {job.location}
@@ -169,7 +169,7 @@ export function JobCard({ job, index }: JobCardProps) {
       </AnimatePresence>
 
       {/* Actions */}
-      <div className="flex items-center justify-between pt-2 border-t border-cream-dark">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2 border-t border-cream-dark">
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className="text-sm text-lavender hover:text-lavender-dark flex items-center gap-1 transition-colors"
@@ -195,7 +195,7 @@ export function JobCard({ job, index }: JobCardProps) {
           whileTap={{ scale: 0.95 }}
           className="px-4 py-2 bg-lavender text-cream rounded-xl font-medium text-sm
                      hover:bg-lavender-dark transition-colors duration-200
-                     flex items-center gap-2 shadow-soft"
+                     flex items-center justify-center gap-2 shadow-soft w-full sm:w-auto"
         >
           Apply
           <ExternalLink className="w-4 h-4" />

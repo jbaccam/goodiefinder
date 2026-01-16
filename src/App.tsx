@@ -2,6 +2,7 @@ import { Header } from './components/Header'
 import { FilterBar } from './components/FilterBar'
 import { JobList } from './components/JobList'
 import { CompanyDirectory } from './components/CompanyDirectory'
+import { Signup } from './components/Signup'
 
 function App() {
   return (
@@ -15,11 +16,12 @@ function App() {
       </div>
 
       {/* Main content */}
-      <div className="relative max-w-7xl mx-auto pb-8">
+      <div className="relative max-w-7xl mx-auto pb-8 px-4 sm:px-6">
         <Header />
         <FilterBar />
         <CompanyDirectory />
         <JobList />
+        <Signup />
       </div>
 
       {/* Footer */}
