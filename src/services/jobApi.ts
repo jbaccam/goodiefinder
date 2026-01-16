@@ -3,7 +3,6 @@ import { categorizeJob } from '../utils/categorize';
 import { API_CONFIG, TOP_IOWA_TECH_EMPLOYERS } from '../utils/constants';
 import type { ExperienceLevel } from '../utils/constants';
 
-const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
 
 /**
  * Transform JSearch API response to our Job type
@@ -72,14 +71,8 @@ async function searchJobs(params: {
     searchParams.set('job_requirements', experienceLevel);
   }
 
-  const url = `${API_CONFIG.BASE_URL}/search?${searchParams}`;
-
-  const response = await fetch(url, {
+  const response = await fetch(`/api/jobs?${searchParams}`, {
     method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': RAPIDAPI_KEY,
-      'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
-    },
   });
 
   if (!response.ok) {
